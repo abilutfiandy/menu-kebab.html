@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Sansation', sans-serif;
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-color: #ffef3a;
+    background-size: cover;
+    background-position: center;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* lapisan putih transparan */
+    z-index: 0; /* berada di belakang konten */
+}
+.wrapper {
+    width: 1024px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* menu */
+nav {
+    background-color: #ffef3a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+nav .wrapper {
+    display: flex;
+    padding: 20px 0;
+    font-size: 18px;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+.menu {
+    width: 70%;
+}
+.menu h2 {
+    font-size: 50px;
+    text-align: center;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+.logo {
+    display: flex;
+    position: absolute;
+    left: 20px;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+}
+
+/* hero */
+header {
+    color: #fff;
+    margin: 10px;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 5px 20px 20px 20px;
+    font-family: 'Oswald';
+    align-items: center;
+    z-index: 1;
+}
+.main-menu-text {
+    display: flex;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(255, 3, 3, 0.7); /* << efek bayangan */
+    flex-direction: column;
+    align-items: start;
+}
+.main-menu-text h2 {
+    font-size: 60px;
+    margin: 10px;
+    padding: 0;
+    line-height: 40px;
+    text-align: left;
+    white-space: nowrap;
+}
+.main-menu-text h4 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.menu-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+/* menu black */
+#black {
+    color: #fff;
+    margin: 10px;
+}
+.black-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 20px 20px 20px;
+    max-width: 1000px;
+    font-family: 'Oswald';
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+.black-menu img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+.black-menu-text {
+    display: flex;
+    line-height: 40px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(255, 3, 3, 0.7); /* << efek bayangan */
+    flex-direction: column;
+    align-items: start;
+}
+
+.black-menu-text h2 {
+    font-size: 60px;
+    margin: 10px;
+    padding: 0;
+    line-height: 40px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.black-menu-text h4 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    text-align: left;
+    white-space: nowrap;
+}
+/* burger */
+#burger {
+    color: #fff;
+    margin: 10px;
+}
+.burger-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 20px 20px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Oswald';
+    z-index: 10;
+}
+.burger-menu-text {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(255, 3, 3, 0.7); /* << efek bayangan */
+    line-height: 40px;
+    align-items: start;
+}
+
+.burger-menu-text h2 {
+    font-size: 60px;
+    margin: 10px;
+    padding: 0;
+    line-height: 40px;
+    text-align: left;
+    white-space: nowrap;
+}
+.burger-menu-text h4 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.burger-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+.flying-burger {
+    width: 700px;
+    animation: floatUpDown 2s ease-in-out infinite;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Keyframe animasi naik turun */
+@keyframes floatUpDown {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* roti bakar */
+#roti-bakar {
+    color: #fff;
+    margin: 10px;
+}
+.roti-bakar-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 20px 20px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Oswald';
+    z-index: 10;
+}
+
+.roti-bakar-menu img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+.roti-bakar-text {
+    display: flex;
+    line-height: 40px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(255, 3, 3, 0.7);
+    flex-direction: column;
+    align-items: start;
+}
+
+.roti-bakar-text h2 {
+    font-size: 60px;
+    margin: 10px;
+    padding: 0;
+    line-height: 40px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.roti-bakar-text h4 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 100px;
+    }
+    .logo {
+        align-self: flex-start;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .logo img {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        width: 12%;
+        height: auto;
+    }
+    .menu h2 {
+        font-size: 28px;
+        margin-top: 10px;
+        text-align: center;
+        padding: 10px;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    /* header */
+
+    .main-menu {
+        display: flex;
+        flex-direction: column-reverse; /* Gambar di atas, teks di bawah */
+        align-items: center;
+    }
+    .main-menu-text {
+        max-width: 1000px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+
+    .menu-image img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .main-menu-text h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .main-menu-text h4 {
+        font-size: 24px;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .main-menu-text span {
+        font-size: 25px !important;
+    }
+
+    /* black menu */
+    #black {
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    .black-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0 10px 0;
+        margin-top: 30px;
+    }
+    .black-menu img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+    .black-menu-text {
+        max-width: 1000px;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .black-menu-text h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .black-menu-text h4 {
+        font-size: 24px;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+    .black-menu-text h4 span {
+        font-size: 25px !important;
+    }
+
+    /* burger */
+    #burger {
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    .burger-menu {
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0px 10px 0px;
+        margin-top: 30px;
+    }
+    .burger-menu-text {
+        max-width: 1000px;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .burger-menu-text h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .burger-menu-text h4 {
+        font-size: 24px;
+        line-height: normal;
+        margin: 5px 0;
+    }
+    .burger-menu-text h4 span {
+        font-size: 25px !important;
+    }
+    .burger-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    /* roti bakar */
+    #roti-bakar {
+        color: #fff;
+    }
+    .roti-bakar-menu {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0px 10px 0px;
+        margin-top: 30px;
+    }
+    .roti-bakar-text {
+        max-width: 1000px;
+        width: 100%;
+        padding: 0;
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+    .roti-bakar-text h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .roti-bakar-text h4 {
+        font-size: 24px;
+        line-height: normal;
+        margin: 5px 0;
+    }
+    .roti-bakar-text span {
+        font-size: 25px !important;
+    }
+    .roti-bakar-menu img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+}
